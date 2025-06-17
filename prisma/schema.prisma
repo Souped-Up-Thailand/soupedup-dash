@@ -1,0 +1,103 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    // NOTE: When using mysql or sqlserver, uncomment the @db.Text annotations in model Account below
+    // Further reading:
+    // https://next-auth.js.org/adapters/prisma#create-the-prisma-schema
+    // https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#string
+    url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+    ADMIN
+    STAFF
+}
+
+model User {
+    id        String   @id @default(uuid()) @map(name: "user_id")
+    name      String?
+    email     String?  @unique
+    image     String?
+    role      UserRole @default(STAFF)
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model Racer {
+    id            String      @id @default(uuid()) @map(name: "racer_id")
+    name          String
+    image         String?
+    createdAt     DateTime    @default(now())
+    updatedAt     DateTime    @updatedAt
+    RacingCar     RacingCar[]
+    racingClassId String?
+}
+
+model Team {
+    id        String      @id @default(uuid()) @map(name: "team_id")
+    name      String
+    image     String?
+    createdAt DateTime    @default(now())
+    updatedAt DateTime    @updatedAt
+    RacingCar RacingCar[]
+}
+
+model RacingCar {
+    id            String       @id @default(uuid()) @map(name: "racing_car_id")
+    name          String
+    image         String?
+    createdAt     DateTime     @default(now())
+    updatedAt     DateTime     @updatedAt
+    Team          Team?        @relation(fields: [teamId], references: [id])
+    teamId        String?
+    Racer         Racer?       @relation(fields: [racerId], references: [id])
+    racerId       String?
+    RacingClass   RacingClass? @relation(fields: [racingClassId], references: [id])
+    racingClassId String?
+    Run           Run[]
+}
+
+model Season {
+    id          String        @id @default(uuid()) @map(name: "season_id")
+    name        String
+    image       String?
+    createdAt   DateTime      @default(now())
+    updatedAt   DateTime      @updatedAt
+    RacingClass RacingClass[]
+}
+
+model RacingClass {
+    id        String      @id @default(uuid()) @map(name: "racing_class_id")
+    name      String
+    image     String?
+    createdAt DateTime    @default(now())
+    updatedAt DateTime    @updatedAt
+    Season    Season?     @relation(fields: [seasonId], references: [id])
+    seasonId  String?
+    RacingCar RacingCar[]
+}
+
+model Stage {
+    id        String   @id @default(uuid()) @map(name: "stage_id")
+    name      String
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+    Run       Run[]
+}
+
+model Run {
+    id          String     @id @default(uuid()) @map(name: "run_id")
+    second      Int
+    createdAt   DateTime   @default(now())
+    updatedAt   DateTime   @updatedAt
+    Stage       Stage?     @relation(fields: [stageId], references: [id])
+    stageId     String?
+    RacingCar   RacingCar? @relation(fields: [racingCarId], references: [id])
+    racingCarId String?
+}
