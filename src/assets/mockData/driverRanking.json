@@ -1,22 +1,82 @@
 [
   {
     "driver": "สยาม บุญช่วย",
-    "team": "Siam Prototype"
+    "team": "Siam Prototype",
+    "elapsed_time": 6.123
   },
   {
     "driver": "ธนพล ชูเจริญผล",
-    "team": "ยูแปดครัว อภิชาตฟาร์มไก่ HYB BY อู่ช่างวัฒน์"
+    "team": "ยูแปดครัว อภิชาตฟาร์มไก่ HYB BY อู่ช่างวัฒน์",
+    "elapsed_time": 6.456
   },
   {
     "driver": "เบญจรงค์ ชมายกุล",
-    "team": "Mactec, ONE POINT, Singha RPM, AOR77, สุพรรณแกรนโฮเทลอ่างทอง"
+    "team": "Mactec, ONE POINT, Singha RPM, AOR77, สุพรรณแกรนโฮเทลอ่างทอง",
+    "elapsed_time": 6.812
   },
   {
     "driver": "อนุวัฒน์ มณีอินทร์",
-    "team": "เอ็ม เอกชาติ&หนุ่ย-เป๋อ สุพรรณ"
+    "team": "เอ็ม เอกชาติ&หนุ่ย-เป๋อ สุพรรณ",
+    "elapsed_time": 7.043
   },
   {
     "driver": "ภิรมย์ ขันทอง",
-    "team": "Ver Technical Garage & S-CAR"
+    "team": "Ver Technical Garage & S-CAR",
+    "elapsed_time": 7.397
+  },
+  {
+    "driver": "สยาม บุญช่วย",
+    "team": "Siam Prototype",
+    "elapsed_time": 7.712
+  },
+  {
+    "driver": "ธนพล ชูเจริญผล",
+    "team": "ยูแปดครัว อภิชาตฟาร์มไก่ HYB BY อู่ช่างวัฒน์",
+    "elapsed_time": 8.054
+  },
+  {
+    "driver": "เบญจรงค์ ชมายกุล",
+    "team": "Mactec, ONE POINT, Singha RPM, AOR77, สุพรรณแกรนโฮเทลอ่างทอง",
+    "elapsed_time": 8.402
+  },
+  {
+    "driver": "อนุวัฒน์ มณีอินทร์",
+    "team": "เอ็ม เอกชาติ&หนุ่ย-เป๋อ สุพรรณ",
+    "elapsed_time": 8.734
+  },
+  {
+    "driver": "ภิรมย์ ขันทอง",
+    "team": "Ver Technical Garage & S-CAR",
+    "elapsed_time": 9.112
+  },
+  {
+    "driver": "ภิรมย์ ขันทอง",
+    "team": "Ver Technical Garage & S-CAR",
+    "elapsed_time": 9.488
+  },
+  {
+    "driver": "สยาม บุญช่วย",
+    "team": "Siam Prototype",
+    "elapsed_time": 9.809
+  },
+  {
+    "driver": "ธนพล ชูเจริญผล",
+    "team": "ยูแปดครัว อภิชาตฟาร์มไก่ HYB BY อู่ช่างวัฒน์",
+    "elapsed_time": 10.141
+  },
+  {
+    "driver": "เบญจรงค์ ชมายกุล",
+    "team": "Mactec, ONE POINT, Singha RPM, AOR77, สุพรรณแกรนโฮเทลอ่างทอง",
+    "elapsed_time": 10.492
+  },
+  {
+    "driver": "อนุวัฒน์ มณีอินทร์",
+    "team": "เอ็ม เอกชาติ&หนุ่ย-เป๋อ สุพรรณ",
+    "elapsed_time": 10.803
+  },
+  {
+    "driver": "ภิรมย์ ขันทอง",
+    "team": "Ver Technical Garage & S-CAR",
+    "elapsed_time": 11.214
   }
 ]

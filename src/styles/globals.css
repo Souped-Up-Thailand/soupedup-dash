@@ -1,6 +1,17 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+.scrollbar-style {
+  @apply [&::-webkit-scrollbar]:w-0.5
+  [&::-webkit-scrollbar-track]:rounded-full
+  [&::-webkit-scrollbar-track]:bg-gray-100
+  [&::-webkit-scrollbar-thumb]:rounded-full
+  [&::-webkit-scrollbar-thumb]:bg-gray-300
+  [&::-webkit-scrollbar-]
+  dark:[&::-webkit-scrollbar-track]:bg-neutral-700
+  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500
+}
+
+::-webkit-scrollbar {
+  width: 10px;  /* width for vertical scrollbar */
+  height: 10px; /* height for horizontal scrollbar */
 }
