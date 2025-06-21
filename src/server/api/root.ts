@@ -12,7 +12,7 @@ import {
 export const appRouter = createTRPCRouter({
   test: createTRPCRouter({
     hello: publicProcedure.query(() => {
-      return { message: "Hello from tRPC!" };
+      return { message: "Hello from SoupedUp Dash" };
     }),
   }),
 });
